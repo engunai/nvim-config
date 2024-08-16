@@ -1,7 +1,8 @@
 -- local log = require('plugins.vlog.log')
 -- vim.print('Hello')
 require('basic')
-require('plugins')
+require('config.lazy')
+-- require('plugins')
 
 -- setruntimepath
 -- runtimepath = vim.o.runtimepath .. ',/Users/zhengruncai/.config/nvim'

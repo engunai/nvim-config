@@ -1,1 +1,0 @@
-require('solarized.config').load()

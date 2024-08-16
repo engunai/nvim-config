@@ -5,9 +5,9 @@ vim.wo.number = true
 -- Show Relative Number
 vim.wo.relativenumber = true
 
+
 -- signcolumn
 vim.wo.signcolumn = 'yes'
-vim.cmd('colorscheme solarized')
 
 vim.o.background = 'light'
 -- vim.o.foldcolumn = '1'
@@ -17,12 +17,9 @@ vim.o.foldenable = true
 
 -- disalbed soft wrap
 vim.wo.wrap = false
+-- disalbed treesitter
+vim.g.treesitter_disable = true
 
-
-
-require('solarized').setup({
-  palette = 'solarized',
-})
 
 
 -- Keybindings

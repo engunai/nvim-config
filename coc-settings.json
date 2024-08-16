@@ -1,0 +1,27 @@
+{
+  "extensions": [
+	  "coc-json", "coc-lua" 
+  ],
+  "prettier.prettierPath": "/Users/zhengruncai/.n/lib/node_modules/prettier",
+  "languageserver": {
+    "typescript": {
+      "typescript.preferences.disableSuggestions": {
+        "parameterHints": true, // 禁用参数提示
+        "quickSuggestions": {
+          "other": false // 禁用其他类型的快速建议
+        }
+      }
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"],
+      "filetypes": ["hs", "lhs", "haskell"]
+    },
+    "lua": {
+      "settings": {
+        "Lua.workspace.checkThirdParty": false
+      }
+    }
+  }
+}
