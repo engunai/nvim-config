@@ -14,9 +14,9 @@ return {
 		config = function() 
 			local wk = require("which-key")
 			wk.add({
+				{ "<c-p>", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
 				{ "<space>f", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-				{ "<space>b", "<cmd>Telescope find_buffers<cr>", desc = "Find Buffers" },
-
+				{ "<space>b", "<cmd>Telescope buffers<cr>", desc = "Find Buffers" },
 			})
 			wk.setup({ preset = 'helix' })
 

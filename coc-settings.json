@@ -1,4 +1,7 @@
 {
+  "suggest.autoTrigger": "always",
+  // 延时
+  "suggest.triggerCompletionWait": 3000,
   "extensions": [
 	  "coc-json", "coc-lua" 
   ],

@@ -5,6 +5,14 @@ vim.wo.number = true
 -- Show Relative Number
 vim.wo.relativenumber = true
 
+-- 设置tab为空格
+vim.bo.expandtab = true
+vim.bo.shiftwidth = 4
+vim.bo.tabstop = 4
+
+-- 设置主题
+-- vim.cmd('colorscheme tokyonight')
+
 
 -- signcolumn
 vim.wo.signcolumn = 'yes'
@@ -47,4 +55,12 @@ keyset("n", "<leader>t", ":tabnew<CR>", { silent = true })
 keyset("n", "<leader>]", ":tabnext<CR>", { silent = true })
 -- previous tab
 keyset("n", "<leader>[", ":tabprevious<CR>", { silent = true })
+
+-- goto
+-- goto line start
+keyset("n", "gs", "^", { silent = true })
+keyset("n", "gh", "0", { silent = true })
+keyset("n", "gl", "$", { silent = true })
+keyset("n", "ge", "G", { silent = true })
+
 

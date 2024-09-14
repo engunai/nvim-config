@@ -82,6 +82,16 @@ return {
 			table.insert(config.sections.lualine_x, component)
 		end
 
+
+		-- show mode 
+		ins_left {
+			function () 
+				return vim.fn.mode():sub(1,1):upper()
+			end,
+			color = { fg = colors.bg, bg = colors.blue, gui = 'bold' },
+			padding = { left = 1, right = 1 },
+		}
+
 		ins_left {
 			function()
 				return '▊'

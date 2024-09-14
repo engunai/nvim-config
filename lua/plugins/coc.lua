@@ -12,11 +12,16 @@ end
 return {
 
 	{
+
 		"neoclide/coc.nvim",
+		enabled = false,
 		config = function()
 			local keyset = vim.keymap.set
 			local opts = { noremap = true, silent = true, expr = true, replace_keycodes = false }
 			keyset('i', '<cr>', [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], opts)
+
+			-- open suggest
+			keyset('i', '<c-/>', 'coc#refresh()', opts)
 
 			-- show docs
 			keyset('n', 'K', '<cmd>lua _G.show_docs()<cr>', { silent = true })
@@ -24,10 +29,14 @@ return {
 
 			-- fileformat
 			keyset('x', '=', '<Plug>(coc-format-selected)', { silent = true })
-			-- comment code
-			keyset('n', 'gcc', '<Plug>(coc-commentary)', { silent = true })
 			-- rename symbol
-			keyset('n', 'gr', '<Plug>(coc-rename)', { silent = true })
+			keyset('n', 'gr', '<Plug>(coc-references)', { silent = true })
+			-- toggle comment
+			keyset('n', '<space>c', '<Plug>(coc-toggle-comment)', { silent = true })
+			-- goto definition
+			keyset('n', 'gd', '<Plug>(coc-definition)', { silent = true })
+			-- next error
+			keyset('n', ']d', '<Plug>(coc-diagnostic-next)', { silent = true })
 		end
 	}
 }

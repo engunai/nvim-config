@@ -9,7 +9,7 @@ return {
 			{ "zo", "<cmd>lua require('ufo').open()<cr>", desc = "Open UFO" },
 			{ "zt", "<cmd>lua require('ufo').toggle()<cr>", desc = "Toggle UFO" },
 		})
-		ufo.setup({  })
+		-- ufo.setup({  })
 	end
 	}
 }
